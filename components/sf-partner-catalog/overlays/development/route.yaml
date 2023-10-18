@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: sf-partner-catalog
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: sf-partner-catalog
+    app.kubernetes.io/part-of: partner-catalog-1
+  name: sf-partner-cataloga6rw
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: sf-partner-catalog
+    weight: null
+status: {}
